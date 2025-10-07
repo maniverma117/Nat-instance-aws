@@ -9,7 +9,7 @@ This guide describes how to create and configure a custom NAT instance on AWS us
 - VPC with:
   - At least one **public subnet** (with Internet Gateway)
   - At least one **private subnet** (no direct Internet Gateway access)
-- **Amazon Linux 2 (ARM64 or x86_64)** AMI
+- **Amazon Linux 2 (AMD or Intel )** AMI don’t use ARM64
 - **Elastic IP** for the NAT instance
 
 ---
@@ -18,8 +18,8 @@ This guide describes how to create and configure a custom NAT instance on AWS us
 
 ### 1. Launch NAT Instance
 
-- AMI: Amazon Linux 2 (64-bit ARM or x86)
-- Instance Type: `t4g.small`, `t4g.medium`, or `t3.micro`
+- AMI: Amazon Linux 2 (x86_64 or x86)
+- Instance Type: `t3.small`, `t3.medium`, or `t3.micro`
 - Subnet: Public subnet
 - Auto-assign Public IP: **Enabled**
 - Security Group:
